@@ -1,1 +1,4 @@
-//your JS code here. If required.
+function convertToUpperAndAlert() {
+  const input = document.querySelector("#fname").value;
+  alert(input.toUpperCase());
+}
