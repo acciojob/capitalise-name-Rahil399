@@ -1,14 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function convertToUpperAndAlert() {
-    const input = document.querySelector("#fname").value;
-    
-    // Log the input to see what is being captured
-    console.log("Captured input:", input);
+  const input = document.querySelector("#fname");
 
-    // Convert the input to uppercase and show in an alert
-    alert(input.toUpperCase());
-  }
-
-  document.querySelector("#convertBtn").addEventListener("click", convertToUpperAndAlert);
+  // Add an event listener for the 'blur' event (when the input loses focus)
+  input.addEventListener("blur", function () {
+    // Convert the text to uppercase when the input loses focus
+    input.value = input.value.toUpperCase();
+  });
 });
-srgkgr
